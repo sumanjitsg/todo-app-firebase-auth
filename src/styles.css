@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: hsl(0 0% 7%);
+  color: white;
+  font-family: sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+body > * {
+  max-width: 90%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input {
+  width: 100%;
+  background-color: hsl(0 0% 15%);
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.3rem;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+
+ul {
+  border-radius: 0.3rem;
+  overflow: hidden;
+}
+
+ul > :not(:first-child) {
+  border-top: 1px solid hsl(0 0% 35% / 0.3);
+}
+
+li {
+  background-color: hsl(0 0% 15%);
+  padding: 1rem;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5rem;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+a {
+  color: inherit;
+}
+
+.button--delete-todo {
+  background-color: inherit;
+  color: hsl(0 80% 50% / 0.6);
+}
+.logout-button {
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+  font-size: inherit;
+  padding: 0.5rem 1rem;
+}
+
+.form {
+  min-width: 340px;
+}
+
+.form > * + * {
+  display: block;
+  margin-top: 1.5rem;
+}
+
+.form__heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.form__control-group > * + * {
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.form__button--submit {
+  background-color: cornflowerblue;
+  position: relative;
+  color: inherit;
+  padding: 0.7rem 1rem;
+  border-radius: 0.3rem;
+  width: 100%;
+  font-size: inherit;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.form__button--submit:not(:disabled):hover::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: white;
+  opacity: 0.1;
+}
+
+.form__button--submit:disabled {
+  cursor: initial;
+  background-color: hsl(0 0% 40%);
+}
